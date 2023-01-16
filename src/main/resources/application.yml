@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    driver-class-name: org.hsqldb.jdbc.JDBCDriver
+    url: jdbc:hsqldb:file:db/CodeNames.db
+    username: admin
+    password: admin
+  jpa:
+    database-platform: org.hibernate.dialect.HSQLDialect
+    hibernate:
+      ddl-auto: create
