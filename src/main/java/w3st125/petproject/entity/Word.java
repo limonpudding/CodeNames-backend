@@ -7,15 +7,16 @@ import lombok.Setter;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "PACK_OF_WORDS")
+@Table(name = "WORD")
 @NoArgsConstructor
 @Getter
 @Setter
-public class PackOfWords {
-
+public class Word {
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
-  private Long packId;
+  private Long wordId;
 
-  private String packName;
+  private String word;
+
+  private Long packId;
 }
