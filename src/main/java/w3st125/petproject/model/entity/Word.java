@@ -1,4 +1,4 @@
-package w3st125.petproject.entity;
+package w3st125.petproject.model.entity;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -14,9 +14,9 @@ import javax.persistence.*;
 public class Word {
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
-  private Long wordId;
+  private Integer id;
 
   private String word;
 
-  private Long packId;
+  private Integer packId;
 }

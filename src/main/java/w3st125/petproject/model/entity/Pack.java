@@ -1,10 +1,11 @@
-package w3st125.petproject.entity;
+package w3st125.petproject.model.entity;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "PACK")
@@ -15,7 +16,11 @@ public class Pack {
 
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
-  private Long packId;
+  private Integer id;
 
   private String packName;
+
+  @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+  @JoinColumn(name = "packId")
+  private List<Word> words;
 }
